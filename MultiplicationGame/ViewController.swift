@@ -17,6 +17,7 @@ class ViewController: UIViewController, ADBannerViewDelegate {
     var multiple: Int = 0
     var addidive: Int = 0
     var sum: Int = 0
+    var timer: Int = 0
     
     
  //Outlets
@@ -28,6 +29,7 @@ class ViewController: UIViewController, ADBannerViewDelegate {
     @IBOutlet weak var addLabel: UILabel!
     @IBOutlet weak var addBtn: UIButton!
  
+    @IBOutlet weak var timerLbl: UILabel!
 //Actions
     
    
@@ -42,9 +44,10 @@ class ViewController: UIViewController, ADBannerViewDelegate {
             
         addLabel.hidden = false
         addBtn.hidden = false
+        timerLbl.hidden = false
             
         multiple = Int(whatToAddBy.text!)!
-            self.view.endEditing(true)
+        self.view.endEditing(true)
             
         }
         
@@ -56,8 +59,8 @@ class ViewController: UIViewController, ADBannerViewDelegate {
         sum = addidive + multiple
         updateLable()
         addidive = sum
-        
-        if sum >= 100 {
+        timerAdd()
+        if sum >= 2000 {
            
             restartGame()
         }
@@ -65,6 +68,11 @@ class ViewController: UIViewController, ADBannerViewDelegate {
     
 
 //Functions
+    
+    func timerAdd(){
+        timerLbl.text = "Time \(timer)"
+        timer++
+    }
     
     func updateLable(){
         addLabel.text = "\(addidive) + \(multiple) = \(sum)"
@@ -80,6 +88,8 @@ class ViewController: UIViewController, ADBannerViewDelegate {
         addLabel.hidden = true
         addBtn.hidden = true
         whatToAddBy.text = ""
+        timerLbl.hidden = true
+        timer = 0
 
     }
     

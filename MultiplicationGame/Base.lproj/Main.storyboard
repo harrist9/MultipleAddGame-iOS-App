@@ -53,7 +53,7 @@
                                 <rect key="frame" x="143" y="135" width="315" height="36"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09O-bO-qsc">
@@ -68,6 +68,13 @@
                                 <rect key="frame" x="60" y="534" width="480" height="66"/>
                                 <animations/>
                             </adBannerView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iap-xw-iwA">
+                                <rect key="frame" x="491" y="73" width="80" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -80,11 +87,13 @@
                             <constraint firstItem="0Ue-gQ-6Ok" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JZd-vP-BhT"/>
                             <constraint firstItem="0Ue-gQ-6Ok" firstAttribute="top" secondItem="JrY-SC-dI4" secondAttribute="bottom" constant="28" id="JyT-j5-0kO"/>
                             <constraint firstItem="09O-bO-qsc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OU5-pu-ccA"/>
+                            <constraint firstItem="iap-xw-iwA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="53" id="bE3-At-tdM"/>
                             <constraint firstItem="KZ1-tt-iox" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dUL-ge-4aR"/>
                             <constraint firstItem="KZ1-tt-iox" firstAttribute="top" secondItem="0Ue-gQ-6Ok" secondAttribute="bottom" constant="70" id="ipk-eK-C7A"/>
                             <constraint firstItem="RX9-Lx-2IP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jwK-qd-gxz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KZ1-tt-iox" secondAttribute="bottom" constant="103" id="nIF-qN-LWR"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="09O-bO-qsc" secondAttribute="bottom" constant="281" id="s1Z-f4-1Ln"/>
+                            <constraint firstItem="iap-xw-iwA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sLH-IQ-c7s"/>
                             <constraint firstItem="cVE-Cf-Fl5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w0W-se-DJ0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KZ1-tt-iox" secondAttribute="bottom" constant="176" id="z7C-d8-OYZ"/>
                         </constraints>
@@ -101,6 +110,7 @@
                         <outlet property="addLabel" destination="JrY-SC-dI4" id="J9k-hA-AZp"/>
                         <outlet property="logo" destination="RX9-Lx-2IP" id="RHU-Ea-yZn"/>
                         <outlet property="playBtn" destination="KZ1-tt-iox" id="zWH-ow-eGQ"/>
+                        <outlet property="timerLbl" destination="iap-xw-iwA" id="7Ml-7m-cac"/>
                         <outlet property="whatToAddBy" destination="0Ue-gQ-6Ok" id="h7e-tK-9Ev"/>
                     </connections>
                 </viewController>
